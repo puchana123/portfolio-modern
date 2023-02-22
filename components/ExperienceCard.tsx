@@ -22,7 +22,7 @@ export default function ExperienceCard({}: Props) {
           duration: 1,
         }}
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover"
-        src="https://cdn.pixabay.com/photo/2023/01/31/05/59/zebra-7757193_640.jpg"
+        src="/images/zebra.jpg"
       />
       <div className="px-5 md:px-10">
         <h4 className="text-4xl font-light">CEO of ZEBRAA</h4>
