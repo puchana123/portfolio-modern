@@ -9,7 +9,7 @@ type Props = {};
 
 export default function Hero({}: Props) {
   const [text] = useTypewriter({
-    words: ["Hello", "From", "Typewriter", "Hook!"],
+    words: ["Hello.", "My name is Zebra.", "Welcome to my website."],
     loop: true,
     delaySpeed: 2000,
   });
@@ -21,15 +21,18 @@ export default function Hero({}: Props) {
         src={zebra}
         alt="profile"
       />
-      <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
-          Software Engineer
+      
+        <h2 className="text-sm uppercase text-gray-500 p-2 tracking-[15px]">
+          Frontend develoer
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <div className="z-20">
+          <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span>{text}</span>
           <Cursor cursorColor="red" />
         </h1>
-        <div className="pt-5">
+        </div>
+        
+        <div className="pt-5 flex flex-col gap-2 md:flex-row z-20">
             <Link href='#about'>
                 <button className="heroButton">About</button>
             </Link>
@@ -43,7 +46,7 @@ export default function Hero({}: Props) {
                 <button className="heroButton">Projects</button>
             </Link>
             
-        </div>
+        
       </div>
     </div>
   );

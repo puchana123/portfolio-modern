@@ -1,6 +1,6 @@
 import React from "react";
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid";
-import { useForm, Resolver, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 type FormValues = {
   name: string;
@@ -20,34 +20,33 @@ function ContactMe({}: Props) {
     
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="h-screen flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-center mx-auto items-center">
+      <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl pb-10">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10 pt-40">
-        <h4 className="text-2xl font-semibold text-center">
-          I have got just what you need.
-          <br />
+      <div className="flex flex-col space-y-10">
+        <h4 className="text-lg md:text-2xl text-center">
+          I have got just what you need. &nbsp;
           <span className="decoration-[#f7ab0a]/50 underline">Lets Talk.</span>
         </h4>
 
-        <div className="space-y-5">
-          <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p className="text-xl">+123456879</p>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-5">
+          <div className="flex items-center space-x-2 justify-center">
+            <PhoneIcon className="text-[#f7ab0a] h-5 w-5 md:h-6 md:w-6 animate-pulse" />
+            <p className="text-base md:text-lg">+123456879</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p className="text-xl">email@gmail.ocm</p>
+          <div className="flex items-center space-x-2 justify-center">
+            <EnvelopeIcon className="text-[#f7ab0a] h-5 w-5 md:h-6 md:w-6 animate-pulse" />
+            <p className="text-base md:text-lg">email@gmail.ocm</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p className="text-xl">+123456879</p>
+          <div className="flex items-center space-x-2 justify-center">
+            <MapPinIcon className="text-[#f7ab0a] h-5 w-5 md:h-6 md:w-6 animate-pulse" />
+            <p className="text-base md:text-lg">+123456879</p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto" action="">
-          <div className="flex space-x-2">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 max-w-7xl px-6 mx-auto" action="">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0">
             <input {...register('name')} placeholder="Name" className="contactInput" type="text" />
             <input {...register('email')} placeholder="Email" className="contactInput" type="email" />
           </div>

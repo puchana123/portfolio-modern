@@ -2,6 +2,7 @@ import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { EnvelopeIcon} from "@heroicons/react/24/solid";
 
 function Header() {
   return (
@@ -34,6 +35,7 @@ function Header() {
         />
       </motion.div>
 
+        
       <motion.div
         initial={{
           x: 500,
@@ -42,14 +44,16 @@ function Header() {
         }}
         animate={{ x: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-row items-center text-gray-400 cursor-pointer"
+        className="flex flex-row items-center text-gray-400 cursor-pointer p-3"
       >
-        <Link href="#contact">
-          <SocialIcon network="email" fgColor="gray" bgColor="transparent" />
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            get in touch
-          </p>
+  
+        <Link href='#contact' className="flex gap-3 items-center">
+        <EnvelopeIcon className="w-7 h-7"/>
+        <p className="uppercase hidden md:inline-flex text-sm">
+          get in touch
+        </p>
         </Link>
+        
       </motion.div>
     </header>
   );
